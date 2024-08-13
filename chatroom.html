@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>chatroom</title>
+    <style>
+         body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image:url(/backgroundchat.jpg)
+     
+    }
+
+    .chat-header {
+      background-color: #f4f4f4;
+      color: black;
+      padding: 13px;
+      display: flex;
+  justify-content: space-between;
+  align-items: center;
+     
+    }
+    .chat-body {
+      flex-grow: 1;
+      overflow-y: scroll;
+      padding: 10px;
+    }
+    .chat-message {
+      display: flex;
+      margin-bottom: 10px;
+    }
+    .chat-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    .chat-input {
+      display: flex;
+      padding: 10px;
+      background-color: #e0dede;
+    }
+    .chat-input input {
+      flex-grow: 1;
+      padding: 8px;
+        margin-left: 35px;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+    }
+
+    .chat-input button {
+      margin-left: 10px;
+      padding: 10px 20px;
+      background-color:#f4f4f4;
+      color: black;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    .chat-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    .chat-body {
+      flex-grow: 1;
+      overflow-y: scroll;
+      padding: 10px;
+    }
+
+    .chat-message {
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    .chat-message.sent {
+      justify-content: flex-end;
+    }
+
+    .chat-message-content {
+      max-width: 60%;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .chat-message.received .chat-message-content {
+      background-color: #ffffff;
+    }
+
+    .chat-message.sent .chat-message-content {
+      background-color: #b6e2ea;
+    }
+    .item {
+  
+  text-align: center;
+  display: flex;
+  justify-content: center; /* This centers the icon horizontally within the item */
+  align-items: center; /* This centers the icon vertically within the item */
+
+}
+
+.start {
+  align-items: left;
+  margin-left: 8px;
+}
+
+.center {
+  text-align: center;
+}
+
+.end {
+  text-align: right;
+
+}
+i {
+  font-size: 24px; /* Adjust the size of the icon as needed */
+}
+img {
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.paper-plane{
+    position:absolute;
+    margin-top: 9px;
+    
+}
+.mic-icon{
+position: absolute;
+right: 90px;
+top: 92%;
+padding: 10px;
+transform: translateY(-5 0%);
+cursor: pointer;
+}
+.emoji-icon{
+    position: absolute;
+right: 120px;
+top: 92%;
+padding: 10px;
+transform: translateY(-5 0%);
+cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+    <div class="chat-header">
+        <div class="item start">
+            <i class="fas fa-chevron-left"></i>
+            Back
+        </div>
+        <div class="item center">Contact</div>
+        <div class="item end">
+            <img src='/profile1.png'width="30" height="30"></i>
+        </div>
+        
+    </div>
+    <div class="chat-body">
+        <div class="chat-message received">
+          <div class="chat-message-content">Hello, how are you?</div>
+        </div>
+        <div class="chat-message sent">
+          <div class="chat-message-content">I'm doing great, thanks for asking!</div>
+        </div>
+      </div>
+    <div class="chat-body"></div>
+    
+    <div class="chat-input">
+        <span class='paper-plane'><i class="fas thin fa-paperclip"></i></span>
+        <input type="text" placeholder="Message" />
+        
+        
+        <button>
+            <i class="fas solid fa-paper-plane"></i>
+        </button>
+        <span class="mic-icon"><i class="fas thin fa-microphone"></i></span>
+        <span class="emoji-icon"><i class="fas regular fa-face-laugh-beam"></i></span>
+      </div>
+      
+</body>
+</html>
